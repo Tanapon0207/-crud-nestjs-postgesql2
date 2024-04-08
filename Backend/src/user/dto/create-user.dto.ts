@@ -11,15 +11,13 @@ import {
 } from 'class-validator';
 
 
-const passwordRegEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z@$!%*?&]{8,20}$/;
+const passwordRegEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*d)(?=.*[@$!%*?&])[A-Za-zd@$!%*?&]{8,20}$/;
 
 export class CreateUserDto {
     @IsString()
     @IsNotEmpty()
     @MinLength(5, { message: "อย่างน้อยต้องมี  5 ตัวอักษร" })
     firstname: string;
-
-
 
     @IsString()
     @IsNotEmpty()
@@ -40,7 +38,7 @@ export class CreateUserDto {
     @IsNotEmpty()
     username: string;
 
-    @IsString()
+    
     @MinLength(8, { message: "อย่างน้อยต้องมี 8 ตัวอักษร" })
     @IsNotEmpty()
     @Matches(passwordRegEx, { message: "รหัสผ่านต้องมีอักขระอย่างน้อย 8 และสูงสุด 20 ตัว" })
