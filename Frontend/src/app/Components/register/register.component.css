@@ -1,0 +1,22 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+
+.content-login{
+    border-radius: 5px;
+    
+}
+
+
+
+.card {
+    
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 50px;    
+}
