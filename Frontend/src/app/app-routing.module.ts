@@ -5,10 +5,11 @@ import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { HomeComponent } from './Components/home/home.component';
 import { ForgetpasswordComponent } from './Components/forgetpassword/forgetpassword.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent
   },
   {
@@ -22,6 +23,16 @@ const routes: Routes = [
   {
     path: 'forgetpassword',
     component: ForgetpasswordComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
+
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
   }
 ];
 

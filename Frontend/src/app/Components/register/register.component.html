@@ -1,49 +1,69 @@
-<div class="container col-xxl-12 px-4 py-5">
+<div class="register_form container col-xxl-12 px-4 py-5">
     <div class="card">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
 
             <div class="col-lg-6">
-                <div class="content-header mb-3">
+                <div class="content-header">
                     <h1>Register</h1>
                     <P>สมัครสมาชิก</P>
                 </div>
                 <div class="content-body">
-                    <div class="row">
-                        <div class="col">
-                            <label for="firstname" class="form-label">Firstname :</label>
-                            <input type="text" id="firstname" class="form-control mb-3">
-                        </div>
-                        <div class="col">
-                            <label for="lastname" class="form-label">Lastname :</label>
-                            <input type="text" id="lastname" class="form-control mb-3">
-                        </div>
-                    </div>
+                    <form action="">
 
-                    <div class="row">
-                        <div class="col">
-                            <label for="email" class="form-label">Email :</label>
-                            <input type="text" id="email" class="form-control mb-3">
-                        </div>
-                        <div class="col">
-                            <label for="phone" class="form-label">Phone :</label>
-                            <input type="text" id="phone" class="form-control mb-3">
-                        </div>
-                    </div>
 
-                    <label for="username" class="form-label">Username :</label>
-                    <input type="text" id="username" class="form-control mb-3">
 
-                    <label for="password" class="form-label">Password :</label>
-                    <input type="password" id="password" class="form-control mb-3">
+
+                          <div class="row">
+                                <div class="col">
+                                    <label for="firstname" class="form-label">Firstname :</label>
+                                    <input type="text" id="firstname" class="form-control mb-3" [(ngModel)]="firstname" [ngModelOptions]="{standalone: true}" required>
+                                </div>
+                                <div class="col">
+                                    <label for="lastname" class="form-label">Lastname :</label>
+                                    <input type="text" id="lastname" class="form-control mb-3" [(ngModel)]="lastname" [ngModelOptions]="{standalone: true}" required>
+                                </div>
+                            </div>
+               
+
+
+                       
+                            <div class="row">
+                                <div class="col">
+                                    <label for="email" class="form-label">Email :</label>
+                                    <input type="text" id="email" class="form-control mb-3" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" required>
+                                </div>
+                                <div class="col">
+                                    <label for="phone" class="form-label">Phone :</label>
+                                    <input type="text" id="phone" class="form-control mb-3" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}" required>
+                                </div>
+                            </div>
+                     
+
+                   
+                            <label for="username" class="form-label">Username :</label>
+                            <input type="text" id="username" class="form-control mb-3" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" required>
+                   
+
+                      
+                            <label for="password" class="form-label">Password :</label>
+                            <input type="password" id="password" class="form-control mb-3" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required>
+                 
+
+
+
+                        <div class="content-footer">
+                            <span>
+                                <p><a routerLink="/login">ฉันมีรหัสผ่านเเล้ว</a></p>
+                                <p><a routerLink="/dashboard">###</a></p>
+                            </span>
+                            <button type="button" class="btn btn-outline-primary" (click)="register()">Register</button>
+                        </div>
+
+                    </form>
+
 
                 </div>
 
-                <div class="content-footer">
-                    <span>
-                        <p><a href="login">ฉันมีรหัสผ่านเเล้ว</a></p>
-                    </span>
-                    <button type="button" class="btn btn-outline-primary">Register</button>
-                </div>
 
             </div>
 

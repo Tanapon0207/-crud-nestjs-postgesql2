@@ -8,11 +8,14 @@
                     <P>กรุณาเข้าสู่ระบบ</P>
                 </div>
                 <div class="content-body">
-                    <label for="username" class="form-label">Username :</label>
-                    <input type="text" id="username" class="form-control mb-3">
+                    <form action="">
+                        <label for="username" class="form-label">Username :</label>
+                        <input type="text" id="username" class="form-control mb-3">
 
-                    <label for="password" class="form-label">Password :</label>
-                    <input type="password" id="password" class="form-control mb-3">
+                        <label for="password" class="form-label">Password :</label>
+                        <input type="password" id="password" class="form-control mb-3">
+                    </form>
+
 
                 </div>
 
@@ -21,21 +24,21 @@
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault">
-                                 Remember me
+                                Remember me
                             </label>
-                           
+
                         </div>
-    
-                        <p><a href="forgetpassword">ลืมรหัสผ่าน?</a></p>
+
+                        <p><a routerLink="/forgetpassword">ลืมรหัสผ่าน?</a></p>
                     </div>
-             
+
 
                     <span>
 
-                        <p><a href="register">สมัครสมาชิก</a></p>
+                        <p><a routerLink="/register">สมัครสมาชิก</a></p>
 
                     </span>
-                    <button type="button" class="btn btn-outline-primary">Login</button>
+                    <button type="button" class="btn btn-outline-primary" routerLink="/home">Login</button>
                 </div>
 
             </div>

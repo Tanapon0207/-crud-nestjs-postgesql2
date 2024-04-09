@@ -12,13 +12,15 @@ export class UserController {
   @Post()
   async create(@Body() createUserDto: CreateUserDto, @Res() res: Response) {
     try {
-      // สร้างผู้ใช้งาน
       await this.userService.create(createUserDto);
-      // ส่งคำตอบกลับไปยัง client
-      res.status(HttpStatus.CREATED).send('สร้างผู้ใช้งานเรียบร้อยแล้ว');
+      return res.status(HttpStatus.CREATED).json({
+        message: 'สร้างผู้ใช้งานเรียบร้อยแล้ว',
+      });
     } catch (error) {
       console.error(error);
-      res.status(HttpStatus.INTERNAL_SERVER_ERROR).send('เกิดข้อผิดพลาดในการสร้างผู้ใช้งาน');
+      return res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
+        message: 'เกิดข้อผิดพลาดในการสร้างผู้ใช้งาน',
+      });
     }
   }
   
@@ -32,7 +34,6 @@ export class UserController {
 
       res.status(HttpStatus.OK).send(users);
     } catch (error) {
-      // หากเกิดข้อผิดพลาดในการดึงข้อมูลผู้ใช้งาน
       res.status(HttpStatus.INTERNAL_SERVER_ERROR).send('เกิดข้อผิดพลาดในการดึงข้อมูลผู้ใช้งาน');
     }
   }
